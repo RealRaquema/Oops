@@ -1,0 +1,48 @@
+#include<iostream>
+using namespace std;
+class RectArea {
+    private: 
+        int length;
+        int  width;
+        int  area;
+
+        void sqArea(){
+        area = length*length;
+    }
+
+    void rectArea(){
+        area = length*width;
+    }
+
+    public: 
+    
+    RectArea(int l){
+        length = l;
+    }
+    
+    RectArea(int l, int w){
+        length = l;
+        width = w;
+    }
+
+    RectArea(RectArea& obj){
+        length = obj.length;
+        width = obj.width;
+        area = obj.area;
+    }
+
+    int getSqArea(){
+        return length*length;
+    }
+    int getRectArea(){
+        return length*length;
+    }
+};
+
+int main (){
+    RectArea r1(12,10);
+    RectArea s1(10);
+    cout<<"Area of rectangle is: "<<r1.getRectArea()<<endl;
+    cout<<"Area of square is: "<<s1.getSqArea();
+
+}
