@@ -21,4 +21,5 @@ int main (){
  Sample obj1;
  obj1.update();   
  obj1.write();
+return 0;
 }
